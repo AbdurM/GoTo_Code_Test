@@ -18,7 +18,6 @@ abstract class BaseGateway {
     );
 
     if (response.statusCode == 200) {
-      print(response.body);
       return json.decode(response.body) as Map<String, dynamic>;
     } else {
       throw Exception(response.body);
